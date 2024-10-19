@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/prototipo_app/css/index_admin.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <link rel="stylesheet" href="/prototipo_app/css/sesion_admin.css">
+    <title>Listar citas</title>
+</head>
+<body>
+    <nav>
+        <div class="navbar_left">
+            <img class="logo" src="/prototipo_app/images/LogoSACV.png" alt="logo">
+            <ul>
+                <li>
+                    <a href="/prototipo_app/html/listarCitas.html">citas</a>
+                </li>
+                <li>
+                    <a href="/prototipo_app/html/index_admin.html">usuario</a>
+                </li>
+                <li>
+                    <a href="/prototipo_app/html/crearUsuario.html">Crear usuarios</a>
+                </li>
+            </ul>
+            <p class="p"> listado de citas </p>
+        </div>
+
+    </nav>
+    <nav>
+        <table class="table" >
+            <thead>
+                <th class="input">
+                    ingrese el numero de documento 
+                    <input type="text" id="busqueda" />
+                </th>
+              <tr>
+                <th scope="col">documento</th>             
+                <th scope="col">nombre</th>
+                <th scope="col">apellido</th>
+                <th scope="col">contacto</th>
+                <th scope="col">e-mail</th>
+                <th scope="col">Nombre servicio</th>
+                <th scope="col">fecha servicio</th>
+            </tr>
+            </thead>
+            <tbody id="cuerpotabla">
+                <script type="module" src="/prototipo_app/js/listarCitas.js"></script>
+            </tbody>
+          </table>
+    </nav>
+    <ul class="pag_barra">
+        <a href="#" class="paginacion"> <img src="/prototipo_app/assets/chevrons-left.svg" alt="" id="atrasTodo" ></a>
+        <a href="#" class="paginacion" ><img src="/prototipo_app/assets/arrow_left.svg" alt="" id="atrasUno" ></a>
+        <h4 class="numeroPg" id="imprimirNum"></h4>
+        <a href="#" class="paginacion"> <img src="/prototipo_app/assets/arrow_rigth.svg" alt="" id="adelanteUno" ></a>
+        <a href="#" class="paginacion"><img src="/prototipo_app/assets/chevrons-right.svg" alt="" id="adelanteTodos" ></a>
+     </ul>
+</body>
+</html>

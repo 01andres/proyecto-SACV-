@@ -1,0 +1,1 @@
+import { URL_API } from "./config";

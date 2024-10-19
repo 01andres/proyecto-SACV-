@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/prototipo_app/css/crearUsuario_tipoUsuario.css">
+    <title>formulario crear usuario</title>
+</head>
+<body>
+    <div class="img">
+        <a href="/prototipo_app/html/index_admin.html"><img src="/prototipo_app/images/LogoSACV.png" alt="" /></a>
+    </div>
+    <div class="login">
+        <div class="form-conteiner">
+            <h1 class="title">Editar Datos del Usuario </h1>
+            <form  class="form">
+                <div>     
+                               
+                <label for="name" class="label">nombres</label>
+                <input type="text" id="name" placeholder="nombre" class="input input-name">
+
+                <label for="name" class="label">apellidos</label>
+                <input type="text" id="apellidos" placeholder="apellidos" class="input input-name">
+<!-- 
+                <label for="documento" class="label">documento</label>
+                <input type="text" id="documento" placeholder="documento" class="input input-name"> -->
+
+                <label for="documento" class="label">contacto</label>
+                <input type="text" id="contacto" placeholder="contacto" class="input input-name">
+
+                <label for="email" class="label">Email</label>
+                <input type="text" id="email" placeholder="@gmail.com" class="input input-email">
+
+                <label for="password" class="label">password</label>
+                <input type="text" id="password" placeholder="*********" class="input input-password">
+
+                <label for="datetime" class="label">fecha de nacimineto</label>
+                <input type="date" id="fechaNacimiento" placeholder="año/mes/dia" class="input input-password">
+
+                </div>
+                <input id="boton_login" type="submit" value="Update" class="primary-botton ligin-boton">
+            </form>
+        </div>
+    </div>
+    <script type="module" src="/prototipo_app/js/editarUsuario.js" ></script>
+</body>
+</html>

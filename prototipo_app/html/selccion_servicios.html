@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Reserva de Servicios</title>
+    <!-- Incluye el enlace a Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/prototipo_app/css/seleccion _servicios.css">
+</head>
+<body>
+    <div class="containerlogo  mt-2  ">
+        <div class="d-flex flex-row align-items-center ">
+            <div class=" col-lg-1">
+              </div>
+          <div class=" col-lg-4">
+            <img src="/prototipo_app/images/LogoSACV.png" class="" height="400 px " width="400 px"  alt="...">
+          </div>
+          <div class=" col-lg-2  ">
+            <img src="/prototipo_app/images/veterinaria.png"  class="img-fluid " height="150 px " width="150 px"  alt="logo1">
+          </div>
+          <div class="col -lg-2">
+            <img src="/prototipo_app/images/peluqueria 2.png" class="img-fluid "  height="150 px " width="150 px" alt="logo2">
+          </div>
+          <div class="col -lg-2">
+            <img src="/prototipo_app/images/paseo canino.png" class="img-fluid "  height="150 px " width="150 px"alt="logo3">
+          </div>
+        </div>
+    </div>
+<div class="container">
+    <h2 class="mb-4">Reserva de Servicios</h2>
+
+    <div class="row">
+        <!-- Servicio 1 -->
+        <div class="col-md-4"  >
+            <div class="card servicio-card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">medicina Veterinaria</h5>
+                    <button id="medicina_Veterinaria" class="btn btn-primary btn-block servicio-btn" onclick="seleccionarServicio('medicina Veterinaria')">Seleccionar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Servicio 2 -->
+        <div class="col-md-4 ">
+            <div class="card servicio-card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">peluqueria canina</h5>
+                    <button id="peluqueria_canina" class="btn btn-primary btn-block servicio-btn" onclick="seleccionarServicio('peluqueria canina')">Seleccionar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Servicio 3 -->
+        <div class="col-md-4">
+            <div class="card servicio-card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Paseo canino</h5>
+                    <button id="paseo_canino" class="btn btn-primary btn-block servicio-btn" onclick="seleccionarServicio('paseo canino')">Seleccionar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Selección de Fecha y Hora -->
+    <form class="mt-4">
+        <div class="form-group">
+            <label for="fecha">Selecciona la Fecha:</label>
+            <input type="date" class="form-control" id="fecha">
+        </div>
+        <div class="form-group">
+            <label for="hora">Selecciona la Hora:</label> <br/>
+            <select class="input"  id="hora">
+                <option value=""></option>
+                <option value="">08:00am</option>
+                <option value="">09:00am</option>
+                <option value="">10:00am</option>
+                <option value="">11:00am</option>
+                <option value="">02:00pm</option>
+                <option value="">03:00pm</option>
+                <option value="">04:00pm</option>
+                <option value="">05:00pm</option>
+            </select>
+        </div>
+
+        <!-- Botón para mostrar el mensaje -->
+        <button id="ReservarCita" type="button" class="btn btn-success" onclick="mostrarMensaje()">Reservar Cita</button>
+    </form>
+
+    <!-- Mensaje de Confirmación (Inicialmente oculto) -->
+    <div id="mensajeConfirmacion" class="mt-4" style="display: none;">
+        <div class="alert alert-success" role="alert">
+            <strong>Reserva Exitosa!</strong> Has seleccionado el servicio <span id="servicioSeleccionado"></span>,
+            para el día <span id="fechaSeleccionada"></span> a las <span id="horaSeleccionada"></span>. <br/>
+            <a href="/prototipo_app/html/index.html" class="btn btn-primary btn "> regresar al inicio </a>
+        </div>
+       
+
+    </div>
+</div>
+
+<!-- Incluye el enlace a Bootstrap JS y Popper.js -->
+<script src="https://code.jquery.com/jqum/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script type="module" src="/prototipo_app/js/seleccion_servicios.js"></script>
+<!-- <script type="module" src="/prototipo_app/js/seleccion_servicios.js">
+    import {seleccionarServicio} from '/prototipo_app/js/seleccion_servicios.js';
+    window.seleccionarServicio = seleccionarServicio;
+</script> -->
+</body>
+</html>

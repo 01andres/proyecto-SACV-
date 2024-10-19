@@ -1,0 +1,33 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+    color: #495057;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.servicio-card {
+    margin-bottom: 20px;
+}
+
+.servicio-img {
+    max-height: 100px;
+    object-fit: cover;
+}
+.fechaNacimiento{
+    height: 40px !important;
+    width: 535px !important;
+    border-radius: 8px !important;
+    border: none !important;
+    color: grey !important;
+}
+
+@media (max-width: 640px) {
+    .logo {
+      display: block;
+    }
+}
+
+

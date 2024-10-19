@@ -1,0 +1,40 @@
+            body{
+            
+                margin: 40px;
+                background-color: whitesmoke;
+                padding: 40px;
+
+            }
+            .container{
+                margin-top: 10px;
+                height: auto;
+                width: 500px;
+                grid-template-columns: 2,1fr;
+                grid-gap: 10px;
+            
+
+
+            }
+            .card {
+            background-color: #78a6f6; /* Color de fondo de la tarjeta  */
+            color: #fff; /* Color de texto en la tarjeta - blanco */
+            border-radius: 30px;
+            width: 500px;
+            border: solid 1px whitesmoke;
+            
+        }
+
+        .card-body {
+            padding: 40px;
+            border-radius: 30px;
+            
+        }
+        .image{
+            float: left;
+        }
+        @media (max-width: 640px) {
+            .logo {
+              display: block;
+            }
+        }
+        

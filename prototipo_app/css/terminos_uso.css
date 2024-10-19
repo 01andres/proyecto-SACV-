@@ -1,0 +1,31 @@
+body {
+    background-color: #f8f9fa; /* Color de fondo claro */
+    font-family: 'Arial', sans-serif; /* Estilo de fuente */
+    line-height: 1.6;
+    color: #495057; /* Color de texto principal */
+}
+
+h2 {
+    color: #007bff; /* Color azul para los títulos */
+}
+
+h4 {
+    color: #28a745; /* Color verde para subtítulos */
+}
+
+p {
+    margin-bottom: 1.25rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+.container {
+    padding: 40px;
+ }
+ @media (max-width: 640px) {
+    .logo {
+      display: block;
+    }
+}

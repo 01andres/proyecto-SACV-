@@ -1,0 +1,58 @@
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+    color: #495057;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.servicio-card {
+    margin-bottom: 20px;
+}
+
+.servicio-img {
+    max-height: 100px;
+    object-fit: cover;
+}
+
+
+
+label {
+    font-size: 16px;
+    color: #333;
+
+    
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-top: 5px;
+}
+
+.form-control:focus {
+    border-color: #5b9bd5;
+    outline: none;
+    box-shadow: 0 0 5px rgba(91, 155, 213, 0.5);
+}
+
+.input{
+    height:40px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+@media (max-width: 640px) {
+    .logo {
+      display: block;
+    }
+}
+
