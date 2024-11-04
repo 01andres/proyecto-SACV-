@@ -28,7 +28,7 @@
                     <a href="/prototipo_app/html/crearUsuario.html">Crear usuarios</a>
                 </li>
             </ul>
-            <p class="p"> listado de usuarios </p>
+            <p class="p"> LISTADO DE USUARIOS </p>
         </div>
         
     </nav>
@@ -36,24 +36,20 @@
         <table class="table" >
             
             <thead>
-
                 <th class="input">
                     ingrese el numero de documento 
                     <input type="text" id="busqueda" />
                 </th>
-
-
-                <tr>
-                <th scope="col">documento </th>
+                <tr class="listado">
+                <th  scope="col">documento </th>
                 <th scope="col">nombre</th>
                 <th scope="col">apellido</th>
                 <th scope="col">contacto</th>
                 <th scope="col">e-mail</th>
                 <th scope="col">fecha nacimineto</th>
                 </tr>
-
             </thead>
-            <tbody id="cuerpotabla">
+            <tbody id="cuerpotabla" class="cuerpotabla">
                 <script type="module" src="/prototipo_app/js/sesion_admin.js"></script>
             </tbody>
           </table>

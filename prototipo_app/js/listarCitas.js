@@ -19,7 +19,7 @@ function listarTabla(data) {
     <td class="text-center" >${user.mail} </td>
     <td class="text-center" >${user.nombreServicio} </td>
     <td class="text-center" >${changeFormatDate(user.fechaServicio) } </td>
-    <td> <button id="borrar" value =${user.idDetalleServicio} class="btn-danger" >eliminar</button></td>
+    <td> <button id="borrar" value =${user.idDetalleServicio} class="btn-danger" ><img src="/prototipo_app/assets/trash.svg"/></button></td>
     `;
     
     tabla.appendChild(row);

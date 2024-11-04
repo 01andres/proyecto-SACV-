@@ -13,13 +13,16 @@
 body {
     margin: 0;
     font-family: 'Quicksand', sans-serif;
+    background-color: #EEEEEE;
   }
   .btn-warning{
     background-color: white;
      border: 1px solid #007bff;
      border-radius: 10px;
     }
-.btn-warning:hover  {background: #0b7dda; color: white;}
+.btn-warning:hover 
+ {background: #0b7dda; color: white;
+}
 
 .btn-danger{
     color: black;
@@ -54,6 +57,7 @@ padding: 20px;
 .numeroPg{
     height: 25px;
 }
+
 @media (max-width: 640px) {
     .logo {
       display: block;

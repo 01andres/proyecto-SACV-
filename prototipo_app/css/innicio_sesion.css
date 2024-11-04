@@ -9,6 +9,7 @@
     --lg: 18px;
   }
   body {
+    background-color: #EEEEEE;
     margin: 0;
     font-family: 'Quicksand', sans-serif;
   }

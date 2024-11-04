@@ -8,6 +8,8 @@
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+
 
         <!-- Bootstrap CSS v5.2.1 -->
         <link
@@ -16,11 +18,50 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <style>
+          body{
+            /* background-image: url(/prototipo_app/images/fondoindex.jpg); */
+            background-color: #EEEEEE;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+          }
+          .navbar{
+            background-color: #b4cbef !important ;
+            border-radius: 10px !important;
+          }
+          .nav-link{
+            background-color: #EEEEEE ;
+            border-radius: 5px;
+            border: 1px solid;
+            padding:10px;
+            margin-left: 10px;
+            
+          }
+          .images2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 20%;
+            left: 65%;
+          }
+          #lottie-animation{
+            width: 20%; /* Ancho de la animación */
+            height: 40%; /* Alto de la animación */
+            position: absolute; /* Posición absoluta */
+            left: 85%; /* Posicionamiento horizontal */
+            top: 445px; /* Posicionamiento vertical */
+          }
+        
+          
+        </style>
     </head>
 
     <body>
         <header>
-              <nav class="navbar" style="background-color: #e3f2fd;">
+              <nav class="navbar" style="background-color: #b4cbef;">
                 <nav class="navbar navbar-expand-lg bg-body-tertiary">
                     <div class="container-fluid">
                       <a class="navbar-brand" href="#">Salud Animal Clinica Veterinaria</a>
@@ -36,11 +77,9 @@
                             <a class="nav-link" href="/prototipo_app/html/nuestros_servicios.html"> Nuestros servicios </a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#"></a>
+                            <a class="nav-link-p" href="#"></a>
                           </li>
-                          <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true"></a>
-                          </li>
+
                         </ul>
                       </div>
                     </div>
@@ -57,12 +96,15 @@
               <div class=" col-lg-2  ">
                 <img src="/prototipo_app/images/veterinaria.png"  class="img-fluid " height="150 px " width="150 px"  alt="logo1">
               </div>
-              <div class="col -lg-2">
+               
+                <img  class=" images2" src="/prototipo_app/images/mascota2-removebg-preview.png">
+              
+              <!-- <div class="col -lg-2">
                 <img src="/prototipo_app/images/peluqueria 2.png" class="img-fluid "  height="150 px " width="150 px" alt="logo2">
               </div>
               <div class="col -lg-2">
                 <img src="/prototipo_app/images/paseo canino.png" class="img-fluid "  height="150 px " width="150 px"alt="logo3">
-              </div>
+              </div> -->
             </div>
         </div>
         <div class="containertexto text-center mt-5 ">
@@ -83,7 +125,7 @@
               </div>
               <div class="col-lg-4 align-">
                 <a href="/prototipo_app/html/innicio_sesion.html" class="btn btn-primary btn"> inicia sesion  </a>
-                <a href="/prototipo_app/html/pagina_registro.html" class="btn btn-secondary btn"> crea  cuenta </a>
+                <a href="/prototipo_app/html/pagina_registro.html" class="btn btn-secondary btn"> Registrarse </a>
               </div>
               </div>
             </div>
@@ -101,6 +143,7 @@
                 </div>
               </div>
         </footer>
+        |<div class="lottiefile" id="lottie-animation"></div>
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -113,5 +156,6 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+        <script src="/prototipo_app/js/index.js"></script>
     </body>
 </html>

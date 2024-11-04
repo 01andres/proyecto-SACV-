@@ -41,8 +41,9 @@ document.getElementById("form").addEventListener("submit", async function (event
 
         if (usuario.idTipoUsuario == 2) {
           window.location.href = "/prototipo_app/html/selccion_servicios.html";
+          
         } else {
-          window.location.href = "/prototipo_app/html/index_admin.html";
+          window.location.href = "/prototipo_app/html/listarCitas.html";
         }
       } else {
         warnings.innerHTML = "Usuario no encontrado. Verifica tus credenciales.";

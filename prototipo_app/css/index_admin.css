@@ -4,6 +4,7 @@
     box-sizing: border-box;
 
 }
+
 .btn-warning{
   background-color: white;
    border: 1px solid #007bff;
@@ -24,12 +25,13 @@
   }
 .table{
   text-align: center;
-  margin-top: 20px;
+  margin-top:3%;
   width: 100%;
 }
 body {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
+  background-color: #EEEEEE;
 }
 
 
@@ -46,10 +48,7 @@ body {
  --md: 16px;
  --lg: 18px;
 }
-body {
- margin: 0%;
 
-}
 nav{
   display: flex;
   justify-content: space-between;
@@ -166,6 +165,7 @@ color: var(--hospital-green);
 
 }
 .pag_barra{
+  margin-top: 1%;
   align-items: center;
   display: flex;
   justify-content: end;
@@ -185,7 +185,15 @@ color: var(--hospital-green);
       height: 25px;
       padding: 2px ;
   }
-
+  .cuerpotabla{
+    height: 250px;
+    width: 100%;
+  }
+.listado{
+  border:1px solid;
+  border-radius: 5px;
+  width: 100%;
+}
 
 
 

@@ -86,22 +86,25 @@
         <!-- Botón para mostrar el mensaje -->
         <button id="ReservarCita" type="button" class="btn btn-success" onclick="mostrarMensaje()">Reservar Cita</button>
     </form>
+<!-- Overlay para desenfocar el fondo -->
+<div id="overlay" style="display: none;"></div>
 
-    <!-- Mensaje de Confirmación (Inicialmente oculto) -->
-    <div id="mensajeConfirmacion" class="mt-4" style="display: none;">
-        <div class="alert alert-success" role="alert">
-            <strong>Reserva Exitosa!</strong> Has seleccionado el servicio <span id="servicioSeleccionado"></span>,
-            para el día <span id="fechaSeleccionada"></span> a las <span id="horaSeleccionada"></span>. <br/>
-            <a href="/prototipo_app/html/index.html" class="btn btn-primary btn "> regresar al inicio </a>
-        </div>
-       
+<!-- Mensaje de Confirmación (Inicialmente oculto) -->
+<div id="mensajeConfirmacion" class="mt-4" style="display: none;">
+    <div class="alert alert-success" role="alert">
+        <strong>Reserva Exitosa!</strong> su servicio de  <span id="servicioSeleccionado"></span>,
+        a sido seleccionado para la fecha <span id="fechaSeleccionada"></span> a las <span id="horaSeleccionada"></span> horas  <br/>
+        <a href="/prototipo_app/html/index.html" class="btn btn-primary btn">Regresar al inicio</a>
+    </div>
+</div>
+
 
     </div>
 </div>
 
 <!-- Incluye el enlace a Bootstrap JS y Popper.js -->
 <script src="https://code.jquery.com/jqum/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapery-3.5.1.slim.min.js"></script>
+<!-- <script src="https://stackpath.bootstrapery-3.5.1.slim.min.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script type="module" src="/prototipo_app/js/seleccion_servicios.js"></script>
 <!-- <script type="module" src="/prototipo_app/js/seleccion_servicios.js">

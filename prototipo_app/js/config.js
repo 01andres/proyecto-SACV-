@@ -1,3 +1,3 @@
-export const URL_API = 'https://localhost:44372/api';
+export const URL_API = 'http://www.saludanimalcitas2024.somee.com/api';
 
 //
