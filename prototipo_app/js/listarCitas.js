@@ -6,7 +6,7 @@ var imprimirNum = document.getElementById("imprimirNum");
 var pagSiguiente = 1;
 var paginaFinal = 0;
 var totalCount = 0;
-
+  
 function listarTabla(data) {
   tabla.innerHTML = ""; 
   data.forEach((user) => {
@@ -213,9 +213,9 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 document.getElementById("close").addEventListener("click",function(){
   localStorage.removeItem("id")
-  localStorage.createElement("sesion");
-  localStorage.setItem("sesion", 1);
-  localStorage.setItem("sesion", 0);
+  // localStorage.createElement("sesion");
+  // localStorage.setItem("sesion", 1);
+  // localStorage.setItem("sesion", 0);
   window.location = "/prototipo_app/html/innicio_sesion.html"
 
   window.onload = function(){
