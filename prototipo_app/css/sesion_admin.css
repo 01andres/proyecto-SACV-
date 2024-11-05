@@ -27,12 +27,14 @@ body {
 .btn-danger{
     color: black;
     background-color: white;
-    border: 1px solid #da190b;
-    border-radius: 10px;
+    border: 1px solid var(--hospital-green);
+    border-radius: 30%;
+
     }
 
 .btn-danger:hover{
-    background: #da190b; 
+    background:#d63007; 
+    opacity: 80%;
     color: white;
     }
 .table{
@@ -62,4 +64,14 @@ padding: 20px;
     .logo {
       display: block;
     }
+}
+.imgBasura{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+}
+.close{
+    
+background-color: whitesmoke;
 }

@@ -19,7 +19,7 @@ function listarTabla(data) {
     <td class="text-center" >${user.mail} </td>
     <td class="text-center" >${user.nombreServicio} </td>
     <td class="text-center" >${changeFormatDate(user.fechaServicio) } </td>
-    <td> <button id="borrar" value =${user.idDetalleServicio} class="btn-danger" ><img src="/prototipo_app/assets/trash.svg"/></button></td>
+    <td> <button id="borrar" value =${user.idDetalleServicio} class="btn-danger" ><img class="imgBasura" src="/prototipo_app/images/borrar (1).png"/></button></td>
     `;
     
     tabla.appendChild(row);
@@ -148,34 +148,51 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     tabla.addEventListener("click", (event) => {
-      if (event.target.id == "borrar") {
-        const confirmacion = confirm(
-          "¿Estás seguro de que deseas eliminar este registro?"
-        );
-  
-        if (confirmacion == true) {
+      const target = event.target.id === "borrar" ? event.target : event.target.closest("#borrar");
+    
+      if (target) {
+        const idDetalleServicio = target.value;
+        console.log("ID a eliminar:", idDetalleServicio); // Verificar el ID antes de enviar la solicitud
+    
+        const confirmacion = confirm("¿Estás seguro de que deseas eliminar este registro?");
+      
+        if (confirmacion) {
           fetch(`${URL_API}/detalleServicio`, {
             method: "DELETE",
-            body:JSON.stringify({idDetalleServicio: event.target.value}),
+            body: JSON.stringify({ idDetalleServicio }), // Enviar el ID en el cuerpo
             headers: {
               "Content-Type": "application/json",
             },
           })
             .then((response) => {
+              console.log("Respuesta del servidor:", response); // Verificar la respuesta del servidor
               if (!response.ok) {
                 throw new Error("Error al eliminar el usuario");
               }
-  
-              event.target.closest("tr").remove();
+              target.closest("tr").remove(); // Eliminar la fila de la tabla
             })
-            .catch((error) => console.error("imposible eliminar usuario:", error));
+            .catch((error) => console.error("Imposible eliminar usuario:", error));
         }
-      } else if (event.target.id == "editar") {
-        const id = event.target.closest("button.btn-warning").value; 
-        localStorage.setItem('id', id);
-        window.location.href = "/prototipo_app/html/editarUsuario.html"  // Agrega el parámetro a la URL
+      } else if (event.target.closest("#editar")) {
+        const botonEditar = event.target.closest("button.btn-warning");
+        if (botonEditar) {
+          const id = botonEditar.value;
+          localStorage.setItem('id', id);
+          window.location.href = "/prototipo_app/html/editarUsuario.html";
+        }
       }
-  });
+    });
+    
+    
+
+  
+  function eliminarRegistro(idDetalleServicio) {
+    console.log(`Eliminando registro con ID: ${idDetalleServicio}`);
+    // Aquí puedes agregar la lógica para eliminar el registro
+  }
+  
+
+
 
  function changeFormatDate (fecha) {
   const fechaTemp = fecha.split('T');
@@ -194,4 +211,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   return fechaFormato
 }
+document.getElementById("close").addEventListener("click",function(){
+  localStorage.removeItem("id")
+  localStorage.createElement("sesion");
+  localStorage.setItem("sesion", 1);
+  localStorage.setItem("sesion", 0);
+  window.location = "/prototipo_app/html/innicio_sesion.html"
+
+  window.onload = function(){
+    if(!localStorage.getItem("id")){
+      window.location = "/prototipo_app/html/innicio_sesion.html"
+    }
+  }
+
+})
 

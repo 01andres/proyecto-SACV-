@@ -19,8 +19,8 @@ function listarTablaU(data) {
     <td class="text-center" >${user.contacto} </td>
     <td class="text-center" >${user.mail} </td>
     <td class="text-center" >${changeFormatDate(user.fechaNacimiento) } </td>
-    <td> <button id="editar" value =${user.idDocumentoUsuario} class="btn-warning" >editar</button></td>
-    <td> <button id="borrar" value =${user.idDocumentoUsuario} class="btn-danger" >eliminar</button></td>
+          <td> <button id="editar" value =${user.idDocumentoUsuario} class="btn-warning" ><img class="imgBasura" src="/prototipo_app/images//editar-perfil.png"</button></td>
+          <td> <button id="borrar" value =${user.idDocumentoUsuario} class="btn-danger" ><img class="imgBasura" src="/prototipo_app/images/borrar (1).png"/></button></td>
     `;
     
     tabla.appendChild(row);
@@ -47,8 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <td class="text-center" >${user.contacto} </td>
           <td class="text-center" >${user.mail} </td>
           <td class="text-center" >${changeFormatDate(user.fechaNacimiento) } </td>
-          <td> <button id="editar" value =${user.idDocumentoUsuario} class="btn-warning" >editar</button></td>
-          <td> <button id="borrar" value =${user.idDocumentoUsuario} class="btn-danger" >eliminar</button></td>
+          <td> <button id="editar" value =${user.idDocumentoUsuario} class="btn-warning" ><img class="imgBasura" src="/prototipo_app/images//editar-perfil.png"</button></td>
+          <td> <button id="borrar" value =${user.idDocumentoUsuario} class="btn-danger" ><img class="imgBasura" src="/prototipo_app/images/borrar (1).png"/></button></td>
           `;
           
           tabla.appendChild(row);
@@ -67,15 +67,17 @@ document.addEventListener("DOMContentLoaded", () => {
     obtenerUsuarios(listarRegistros);
 
     tabla.addEventListener("click", (event) => {
-      if (event.target.id == "borrar") {
-        const confirmacion = confirm(
-          "¿Estás seguro de que deseas eliminar este registro?"
-        );
-  
-        if (confirmacion == true) {
+      // Detectar si se hizo clic en el botón "borrar" o en la imagen dentro del botón
+      const botonBorrar = event.target.closest("#borrar");
+    
+      if (botonBorrar) {
+        const idDocumentoUsuario = botonBorrar.value;
+        const confirmacion = confirm("¿Estás seguro de que deseas eliminar este registro?");
+    
+        if (confirmacion) {
           fetch(`${URL_API}/usuario`, {
             method: "DELETE",
-            body:JSON.stringify({idDocumentoUsuario: event.target.value}),
+            body: JSON.stringify({ idDocumentoUsuario }), // Usar el valor del botón
             headers: {
               "Content-Type": "application/json",
             },
@@ -84,19 +86,22 @@ document.addEventListener("DOMContentLoaded", () => {
               if (!response.ok) {
                 throw new Error("Error al eliminar el usuario");
               }
-  
-              event.target.closest("tr").remove();
+              botonBorrar.closest("tr").remove(); // Eliminar la fila correspondiente
             })
-            .catch((error) => console.error("imposible eliminar usuario:", error));
+            .catch((error) => console.error("Imposible eliminar usuario:", error));
         }
-      } else if (event.target.id == "editar") {
-        const id = event.target.closest("button.btn-warning").value; 
+      } 
+      
+      // Detectar si se hizo clic en el botón "editar" o en la imagen dentro del botón
+      const botonEditar = event.target.closest("#editar");
+    
+      if (botonEditar) {
+        const id = botonEditar.value;
         localStorage.setItem('id', id);
-        window.location.href = "/prototipo_app/html/editarUsuario.html"  // Agrega el parámetro a la URL
+        window.location.href = "/prototipo_app/html/editarUsuario.html";
       }
-      
-      
     });
+    
 
     inputBusqueda.addEventListener("input", (event) => {
       const busqueda = event.target.value;
@@ -116,8 +121,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <td class="text-center" >${user.contacto} </td>
           <td class="text-center" >${user.mail} </td>
           <td class="text-center" >${changeFormatDate(user.fechaNacimiento) } </td>
-          <td> <button id="editar" value =${user.idDocumentoUsuario} class="btn-warning" >editar</button></td>
-          <td> <button id="borrar" value =${user.idDocumentoUsuario} class="btn-danger" >eliminar</button></td>
+          <td> <button id="editar" value =${user.idDocumentoUsuario} class="btn-warning" ><img class="imgBasura" src="/prototipo_app/images//editar-perfil.png"</button></td>
+          <td> <button id="borrar" value =${user.idDocumentoUsuario} class="btn-danger" ><img class="imgBasura" src="/prototipo_app/images/borrar (1).png"/></button></td>
           `;
           
           tabla.appendChild(row);
@@ -215,27 +220,6 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Error al obtener datos de la API:", error)
     );
     })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   });
 
  function changeFormatDate (fecha) {

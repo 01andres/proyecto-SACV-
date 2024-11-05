@@ -7,10 +7,10 @@
 
 .btn-warning{
   background-color: white;
-   border: 1px solid #007bff;
+   border: 1px solid #6ea8e7;
    border-radius: 10px;
   }
-.btn-warning:hover  {background: #0b7dda; color: white;}
+.btn-warning:hover  {background: #a2d5ff; color: white;}
 
 .btn-danger{
   color: black;
@@ -20,7 +20,7 @@
   }
 
 .btn-danger:hover{
-  background: #da190b; 
+  background: #ff5044; 
   color: white;
   }
 .table{
@@ -52,8 +52,8 @@ body {
 nav{
   display: flex;
   justify-content: space-between;
-  padding: 0 24px;
-  border-bottom: 1px solid var(--very-light-pink);
+  /* padding: 0 24px; */
+  border-bottom: 1px solid var(--black);
   
  }
 .menu{
@@ -81,7 +81,7 @@ height: 60px;
 .navbar_left ul li a,
 .navbar_right ul li a{
 text-decoration: none;
-color: var(--very-light-pink);
+color:black;
 border: 1px solid var(--white);
 border-radius: 8px;
 padding: 8px;
@@ -193,6 +193,12 @@ color: var(--hospital-green);
   border:1px solid;
   border-radius: 5px;
   width: 100%;
+}
+.imgBasura{
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 30px;
 }
 
 

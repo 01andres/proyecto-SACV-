@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const btnCrear = document.getElementById("botonCreate");
   event.preventDefault();
 
+  
+
 
 
   btnCrear.addEventListener("click", (event) => {
